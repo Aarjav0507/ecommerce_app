@@ -1,0 +1,11 @@
+[
+    {
+        "user_id": "U1",
+        "full_name": "anand patil",
+        "email": "anand@gmail.com",
+        "phone": "9876543210",
+        "password": "qwert54321",
+        "role": "customer",
+        "status": "active"
+    }
+]
