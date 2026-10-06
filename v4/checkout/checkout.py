@@ -2,9 +2,10 @@ from db.cart_queries import get_cart_items, clear_cart
 from decorators import logging,authorize,execution_time
 
 
-@authorize("customer")
+
 @logging
 @execution_time
+@authorize("customer")
 def checkout(current_user):
     user_id=current_user[0]
 

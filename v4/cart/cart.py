@@ -8,9 +8,10 @@ from decorators import logging,authorize,execution_time
 
 
 
-@authorize("customer")
+
 @logging
 @execution_time
+@authorize("customer")
 def add_to_cart(current_user):
     user_id=current_user[0]
 
@@ -67,9 +68,10 @@ def view_cart(current_user):
     print("Grand Total: ₹", grand_total)
 
 
-@authorize("customer")
+
 @logging
 @execution_time
+@authorize("customer")
 def remove_product_from_cart(current_user):
     user_id=current_user[0]
 

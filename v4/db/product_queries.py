@@ -16,6 +16,7 @@ def get_all_products():
         cursor.execute(query)
         for product in cursor:
             yield product
+    
     except Error as e:
         print("Unable to retrieve products")
         print("database error",e)
@@ -36,6 +37,7 @@ def find_product(product_id):
         WHERE p.product_id=%s"""
         cursor.execute(query,(product_id,))
         return cursor.fetchone()
+    
     except Error as e:
         print("product not found")
         print("database error",e)

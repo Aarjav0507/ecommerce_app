@@ -1,8 +1,7 @@
+import time
 from functools import wraps
 from datetime import datetime
 from pathlib import Path
-import time
-
 
 
 def authorize(required_role):
@@ -20,7 +19,9 @@ def authorize(required_role):
         return wrapper
     return decorator
 
+
 activity_file=Path("logs/activity.log")
+
 
 def logging(function):
     @wraps(function)

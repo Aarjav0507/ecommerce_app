@@ -13,7 +13,9 @@ def get_cart_items(user_id):
                WHERE ci.user_id=%s
                ORDER BY ci.cart_item_id"""
         cursor.execute(query,(user_id,))
-        return cursor.fetchall()
+        for item in cursor:
+             yield item
+    
     except Error as e:
         print("unable to load cart")
         print("database error",e)

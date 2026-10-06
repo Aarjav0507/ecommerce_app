@@ -17,8 +17,6 @@ def view_products(current_user):
         print("No products available.")
         return
     
-    
-
     for product in products:
         print(
             f"ID: {product[0]} | "
@@ -27,6 +25,7 @@ def view_products(current_user):
             f"Price: ₹{product[3]} | "
             f"Stock: {product[4]}"
         )
+
 
 @logging
 @execution_time
@@ -52,6 +51,7 @@ def search_product(current_user):
     print("Price:", product[3])
     print("Stock:", product[4])
 
+
 @logging
 @execution_time
 def view_categories(current_user):
@@ -70,9 +70,9 @@ def view_categories(current_user):
         )
 
 
-@authorize("admin")
 @logging
 @execution_time
+@authorize("admin")
 def add_product(current_user):
     
     product_name = input("Enter product name: ")
